@@ -1,4 +1,9 @@
 const hapi = require('hapi');
+const inert = require('inert');
+const swagger = require('hapi-swagger');
+const vision = require('vision');
+
+const routes = require('./routes');
 
 const server = new hapi.Server();
 
@@ -8,16 +13,13 @@ server.connection({
   port: Number(serverPort),
 });
 
-server.route({
-  path: '/',
-  method: 'GET',
-  handler: (request, response) => {
-    response({
-      app: 'notes',
-      version: '1.0.0',
-    });
-  },
-});
+server.register([
+  inert,
+  vision,
+  swagger,
+]);
+
+server.route(routes);
 
 server.start((error) => {
   if (error) console.log(error);

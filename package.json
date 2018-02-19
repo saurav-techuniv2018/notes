@@ -12,8 +12,11 @@
   "dependencies": {
     "hapi": "16.6.2",
     "hapi-swagger": "8.0.0",
+    "joi": "9",
     "pg": "^7.4.1",
-    "sequelize": "^4.32.6"
+    "sequelize": "^4.32.6",
+    "inert": "4",
+    "vision": "4.1.1"
   },
   "devDependencies": {
     "@types/sequelize": "^4.27.4",
