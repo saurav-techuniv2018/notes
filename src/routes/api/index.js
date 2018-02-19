@@ -4,7 +4,7 @@ const models = require('../../../models');
 
 module.exports = [
   {
-    path: '/notes',
+    path: '/api/notes',
     method: 'GET',
     config: {
       description: 'Get all the notes.',
@@ -31,7 +31,7 @@ module.exports = [
     },
   },
   {
-    path: '/notes',
+    path: '/api/notes',
     method: 'PUT',
     config: {
       description: 'Replace the list of notes provided in the payload with the ones in the database',
