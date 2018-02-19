@@ -49,7 +49,10 @@ module.exports = [
     handler: (request, response) => {
       models
         .notes
-        .destroy({ truncate: true })
+        .destroy({
+          truncate: true,
+          restartIdentity: true,
+        })
         .then(() => {
           const notesWithIdProperty = request.payload.notes.map(note => ({
             noteId: note.id,
