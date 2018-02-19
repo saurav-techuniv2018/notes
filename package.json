@@ -1,0 +1,27 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Hapi.js server for notes-app",
+  "main": "src/server.js",
+  "repository": "git@github.com:saurav-techuniv2018/notes.git",
+  "author": "Saurav Sahu <sauravsahu.12@live.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "hapi": "16.6.2",
+    "hapi-swagger": "8.0.0",
+    "pg": "^7.4.1",
+    "sequelize": "^4.32.6"
+  },
+  "devDependencies": {
+    "@types/sequelize": "^4.27.4",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "sequelize-cli": "^3.2.0"
+  }
+}
